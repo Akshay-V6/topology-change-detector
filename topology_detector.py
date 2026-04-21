@@ -1,7 +1,7 @@
 """
 topology_detector.py
 --------------------
-Ryu SDN controller application for the Topology Change Detector project.
+Ryu SDN controller application for the Topology Change Detector Project.
 
 Two responsibilities:
   1. Learning switch  - handles packet_in, installs OpenFlow 1.3 flow rules
