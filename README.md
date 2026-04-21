@@ -1,7 +1,15 @@
 # SDN Topology Change Detector
-An SDN-based Topology Change Detector using Mininet and Ryu OpenFlow controller. The controller dynamically monitors the network for switch joins/leaves, link additions/deletions, and port changes, logging all events in real time. It also functions as a learning switch, installing OpenFlow 1.3 flow rules reactively.
+This project implements an SDN-based topology change detector using Mininet and the Ryu OpenFlow controller. The controller dynamically monitors the network for switch joins/leaves, link additions/deletions, and port changes, logging all events in real time. It also functions as a learning switch, installing OpenFlow 1.3 flow rules reactively.
 
 Built as part of the CN Mini Project.
+
+## Author
+Akshay V
+
+## Implementation Notes
+- Implemented using Ryu's topology discovery API (--observe-links)
+- Uses reactive flow installation (learning switch behavior)
+- Tested under link failure and recovery scenarios
 
 ## Topology
 Linear chain of 3 switches (s1-s2-s3), each with 2 hosts attached (h1-h6).
@@ -84,5 +92,8 @@ Run pingall again — expect 0% dropped.
 1. Ryu SDN Framework - https://ryu-sdn.org
 2. Ryu Documentation - https://ryu.readthedocs.io
 3. Mininet - http://mininet.org
-4. OpenFlow 1.3 Specification - https://opennetworking.org
-5. Ryu Topology API - https://github.com/faucetsdn/ryu/blob/master/ryu/topology/api.py
+
+## Conclusion
+The system successfully detects topology changes in real time and adapts network behavior accordingly. It demonstrates how SDN enables centralized control and dynamic network management.   
+5. OpenFlow 1.3 Specification - https://opennetworking.org
+6. Ryu Topology API - https://github.com/faucetsdn/ryu/blob/master/ryu/topology/api.py
