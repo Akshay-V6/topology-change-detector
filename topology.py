@@ -22,7 +22,7 @@ from mininet.cli import CLI
 
 class LinearTopoWithHosts(Topo):
     """
-    Linear topology: 3 switches in a chain.
+    Linear topology: has 3 switches in a chain.
     Each switch has 2 hosts attached.
     s1 -- s2 -- s3
     """
